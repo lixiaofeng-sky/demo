@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author Lixf
  * @date 2020/5/12 17:06
  */
-@FeignClient(name = "user", url = "http://localhost:8002/user")
+//@FeignClient(name = "user", url = "http://localhost:8082/user")
+@FeignClient(name = "user", url = "${constant.url.user}")
 @RequestMapping("/user/interface")
 public interface UserInterface {
     @RequestMapping(value = "/userStr/{code}", method = RequestMethod.GET)

@@ -25,8 +25,9 @@ public class TestController {
 
     @RequestMapping(value = "/feign", method = RequestMethod.GET)
     public String getFeignRes() {
-       String res = userInterface.userStr("007", "特工");
-       return res;
+        System.out.println("into getFeignRes...........");
+        String res = userInterface.userStr("007", "特工");
+        return res;
     }
 
 
