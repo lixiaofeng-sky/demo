@@ -20,7 +20,7 @@ public class TestController {
     public String getWord(@RequestParam(name = "code") String code) {
         System.out.println("code is ");
         System.out.println(code);
-        return "李小锋";
+        return "李小锋" + code;
     }
 
     @RequestMapping(value = "/feign", method = RequestMethod.GET)
